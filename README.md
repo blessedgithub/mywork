@@ -1,3 +1,13 @@
+I chose to use centos 7 linux flavor. Separated functionality of all 3 nodes.
+
+    1 Node serving docker services (Chef client)
+    
+    2 Chef work station 
+    
+    3 Chef server .
+
+## Download the codes and necessary files using the link below 
+
 git clone https://github.com/olawale241/mywork.git
 
 ## ENSURE DOCKER IS INSTALLED AND SERVICE IS RUNNING ON THE CONTAINER SERVER 
