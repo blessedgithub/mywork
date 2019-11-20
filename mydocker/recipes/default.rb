@@ -10,7 +10,7 @@
 docker_image 'nginx' do
   tag 'latest'
 #  action :pull
-  action :run_if_missing
+  action :pull_if_missing
 end
 
 remote_directory "/root/files/nginx" do
@@ -43,6 +43,7 @@ docker_container 'nodejs' do
   port '3000:3000'
 #  binds [ '/nodejs:/etc/nginx/conf.d' ]
 #  subscribes :redeploy, 'docker_image[nginx]'
+  action :run_if_missing
 end
 
 #docker_container 'node' do
