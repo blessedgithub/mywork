@@ -4,7 +4,8 @@ git clone https://github.com/olawale241/mywork.git
 
 
 
-## Copy these 3 files to docker server  
+## Copy these 3 files to docker server to build nodejs image application
+
 scp Dockerfile DOCKERSERVER:/work/directory
 
 scp package.json DOCKERSERVER:/work/directory
@@ -23,8 +24,9 @@ docker build -t simplifi_olawale/nodejs .
 
 
 
-## on CHEF WORKSTATION  
-Copy the cookbooks cloned earlier to cookbook path in knife.rb 
+## on CHEF WORKSTATION , ensure the knife.rb is poiniting to the chef-server and cookbook path is set
+
+Copy the 2  cookbooks downloaded from the git clone earlier (docker and mydocker) 
 
 *docker    #####dependency for mydocker 
 
@@ -37,12 +39,15 @@ Copy the cookbooks cloned earlier to cookbook path in knife.rb
 
 knife cookbook upload mydocker
 
-ADD THE COOKBOOK TO THE node(client) in 
+knife cookbook upload docker
 
-knife node run_list remove node1.identity.lsloyalty.com ''recipe[mydocker]'''
+## ADD THE COOKBOOK TO THE node(client) in 
 
-knife node run_list remove node1.identity.lsloyalty.com ''recipe[docker]''
+knife node run_list remove node1.identity.lsloyalty.com ''recipe[mydocker]'''   ## change node1 to client name please 
 
-## ON THE NODE CLIENT 
+knife node run_list remove node1.identity.lsloyalty.com ''recipe[docker]''      ## change node1 to client name please
+
+
+## ON THE NODE CLIENT where docker is installed and running 
 
 chef-client -o recipe[mydocker]
