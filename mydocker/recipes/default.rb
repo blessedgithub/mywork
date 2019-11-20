@@ -9,7 +9,8 @@
 
 docker_image 'nginx' do
   tag 'latest'
-  action :pull
+#  action :pull
+  action :run_if_missing
 end
 
 remote_directory "/root/files/nginx" do
@@ -26,14 +27,13 @@ end
 #  tag 'alpine'
 #  action :pull
 #end
-
 # Run container exposing ports
 docker_container 'nginx' do
   repo 'nginx'
   tag 'latest'
   port '80:80'
   volumes [ '/root/files/nginx:/etc/nginx' ]
-
+  action :run_if_missing
 #  subscribes :redeploy, 'docker_image[nginx]'
 end
 
