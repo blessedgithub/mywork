@@ -4,7 +4,7 @@ git clone https://github.com/olawale241/mywork.git
 ##### Copy these 3 files to docker server######
 scp Dockerfile <dockerhost>:/work/directory
 
-scp package.json <dockerhost>:/work/directory
+scp package.json /<dockerhost/>:/work/directory
 
 scp server.js <dockerhost>:/work/directory
 
