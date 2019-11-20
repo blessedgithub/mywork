@@ -39,6 +39,8 @@ ADD THE COOKBOOK TO THE node(client) in
 
 knife node run_list add node1 ''recipe[COOKBOOK::mydocker]''
 
+knife node run_list add node1 ''recipe[COOKBOOK::mydocker]''
+
 ## ON THE NODE CLIENT 
 
 chef-client 
