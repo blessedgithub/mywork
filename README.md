@@ -1,5 +1,7 @@
 git clone https://github.com/olawale241/mywork.git
 
+## ENSURE DOCKER IS INSTALLED AND SERVICE IS RUNNING ON THE CONTAINER SERVER 
+
 
 
 ## Copy these 3 files to docker server  
