@@ -37,10 +37,10 @@ knife cookbook upload mydocker
 
 ADD THE COOKBOOK TO THE node(client) in 
 
-knife node run_list add node1 ''recipe[COOKBOOK::mydocker]''
+knife node run_list remove node1.identity.lsloyalty.com ''recipe[mydocker]'''
 
-knife node run_list add node1 ''recipe[COOKBOOK::mydocker]''
+knife node run_list remove node1.identity.lsloyalty.com ''recipe[docker]''
 
 ## ON THE NODE CLIENT 
 
-chef-client 
+chef-client -o recipe[mydocker]
