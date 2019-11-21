@@ -14,15 +14,15 @@ Please change the below in the directory ~/mywork/mydocker/files/nginx/nginx.con
 
 ## STEP 1
 
-## Download the codes and necessary files using the link below 
+## DOWNLOAD THE CODES AND NECESSARY FILES USING THE LINK BELOW
 
 git clone https://github.com/olawale241/mywork.git
 
-##ENSURE DOCKER IS INSTALLED AND SERVICE IS RUNNING ON THE CONTAINER SERVER 
+## ENSURE DOCKER IS INSTALLED AND SERVICE IS RUNNING ON THE CONTAINER SERVER 
 
 ## STEP 2
 
-## Copy these 3 files to docker server to build nodejs image application
+## COPY THESE 3 FILES TO SERVER RUNNING YOUR DOCKER SERVICES TO BUILD NODEJS IMAGES 
 
 scp Dockerfile DOCKERSERVER:/work/directory
 
@@ -33,7 +33,7 @@ scp server.js DOCKERSERVER:/work/directory
 ## STEP 3
 
 
-## Create nodejs image with the dockerfile  
+## CREATE NODEJS IMAGE  
 
 cd /work/directory
 
