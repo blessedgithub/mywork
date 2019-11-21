@@ -18,11 +18,11 @@ Please change the below in the directory ~/mywork/mydocker/files/nginx/nginx.con
 
 git clone https://github.com/olawale241/mywork.git
 
-## ENSURE DOCKER IS INSTALLED AND SERVICE IS RUNNING ON THE CONTAINER SERVER 
+##ENSURE DOCKER IS INSTALLED AND SERVICE IS RUNNING ON THE CONTAINER SERVER 
 
 
 
-## Copy these 3 files to docker server to build nodejs image application
+##Copy these 3 files to docker server to build nodejs image application
 
 scp Dockerfile DOCKERSERVER:/work/directory
 
