@@ -11,8 +11,8 @@ Please change the below in the directory ~/mywork/mydocker/files/nginx/nginx.con
 192.168.1.179 to the IP of the server running docker service 
 
 
-##
-##STEP 1
+
+## STEP 1
 
 ## Download the codes and necessary files using the link below 
 
@@ -42,7 +42,7 @@ docker build -t simplifi_olawale/nodejs .
 
 
 
-## 
+
 ## STEP 2 
 
 ## on CHEF WORKSTATION , ensure the knife.rb is poiniting to the chef-server and cookbook path is set
@@ -55,7 +55,7 @@ Copy the 2  cookbooks downloaded from the git clone earlier (docker and mydocker
 
 
 
-##
+
 ## STEP 3
 
 ##   Then upload cookbook to the chef server 
