@@ -14,15 +14,15 @@ Please change the below in the directory ~/mywork/mydocker/files/nginx/nginx.con
 
 ## STEP 1
 
-++ Download the codes and necessary files using the link below 
+## Download the codes and necessary files using the link below 
 
 git clone https://github.com/olawale241/mywork.git
 
 ##ENSURE DOCKER IS INSTALLED AND SERVICE IS RUNNING ON THE CONTAINER SERVER 
 
+## STEP 2
 
-
-##Copy these 3 files to docker server to build nodejs image application
+## Copy these 3 files to docker server to build nodejs image application
 
 scp Dockerfile DOCKERSERVER:/work/directory
 
@@ -30,10 +30,10 @@ scp package.json DOCKERSERVER:/work/directory
 
 scp server.js DOCKERSERVER:/work/directory
 
+## STEP 3
 
 
-
-##Create nodejs image with the dockerfile  
+## Create nodejs image with the dockerfile  
 
 cd /work/directory
 
@@ -41,11 +41,9 @@ docker build -t simplifi_olawale/nodejs .
 
 
 
+## STEP 4
 
-
-## STEP 2 
-
-##on CHEF WORKSTATION , ensure the knife.rb is poiniting to the chef-server and cookbook path is set
+## ON CHEF WORKSTATION , ENSURE KNIFE.RB IS POINTING TO YOUR CHEF SERVER AND COOKBOOK PATH IS SET 
 
 Copy the 2  cookbooks downloaded from the git clone earlier (docker and mydocker) 
 
@@ -56,16 +54,16 @@ Copy the 2  cookbooks downloaded from the git clone earlier (docker and mydocker
 
 
 
-## STEP 3
+## STEP 5
 
-##Then upload cookbook to the chef server 
+## UPLOAD COOKBOOK TO CHEF SERVER  
 
 knife cookbook upload mydocker
 
 knife cookbook upload docker
 
 ##
-## STEP 4 
+## STEP 6
 
 ##ADD THE COOKBOOK TO THE node(client) in 
 
@@ -75,7 +73,7 @@ knife node run_list remove node1.identity.lsloyalty.com ''recipe[docker]''      
 
 
 ##
-## STEP 5
+## STEP 7
 
 ##ON THE NODE CLIENT where docker is installed and running 
 
