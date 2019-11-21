@@ -14,7 +14,7 @@ Please change the below in the directory ~/mywork/mydocker/files/nginx/nginx.con
 
 ## STEP 1
 
-++Download the codes and necessary files using the link below 
+++ Download the codes and necessary files using the link below 
 
 git clone https://github.com/olawale241/mywork.git
 
