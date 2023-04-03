@@ -6,6 +6,10 @@ I chose to use centos 7 linux flavor. Separated functionality of all 3 nodes.
     
     3 Chef server .
 
+    4 Chef Chioma
+
+    5 Chef Oprah
+
 Please change the below in the directory ~/mywork/mydocker/files/nginx/nginx.conf 
 
 192.168.1.179 to the IP of the server running docker service 
